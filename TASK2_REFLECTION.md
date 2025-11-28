@@ -1,9 +1,16 @@
+# Task 2: Flask Server + Streamlit Vehicle Control Panel Reflection
+
+## Architecture Description
+Understanding the Client-Server Architecture:
 In our vehicle control system, we implemented a classic client-server architecture with clear separation of concerns:
+
 The Client (Streamlit Control Panel):
 The Streamlit application acts as the client and serves as the user interface. It provides an intuitive web-based control panel with interactive elements including a speed slider (0-255) and directional buttons (Forward, Backward, Left, Right, and Stop). When a user interacts with any control element, the client prepares a JSON payload containing the direction and speed parameters, then sends an HTTP POST request to the Flask server's /move endpoint. The client also displays real-time feedback to users about command success or failure, making the interface responsive and informative.
+
 The Server (Flask API):
 The Flask application serves as the backend server, listening for incoming HTTP requests on port 5001. It exposes RESTful API endpoints, primarily the /move endpoint which accepts POST requests with JSON payloads. When the server receives a command, it validates the data, processes it, and currently prints the command to the console terminal. The server returns appropriate HTTP status codes and JSON responses to inform the client whether the command was successfully received and processed.
 Where the Arduino Vehicle Fits In:
+
 In the complete embedded system architecture, the Arduino Uno WiFi will be integrated as the hardware control layer. The architecture will work as follows:
 
 User Interaction Layer: User clicks "Forward" button on Streamlit web interface
