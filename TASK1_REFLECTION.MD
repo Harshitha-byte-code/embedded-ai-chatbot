@@ -1,4 +1,5 @@
-Task 1: Streamlit Chatbot Reflection
+## Task 1: Streamlit Chatbot Reflection
+
 What was easy / hard about using Streamlit + OpenAI?
 Easy Aspects:
 Using Streamlit to build the chatbot interface was remarkably straightforward. The st.chat_message() and st.chat_input() functions made creating a professional-looking chat interface simple with minimal code. Streamlit's session state management worked seamlessly for maintaining conversation history across interactions. The OpenAI API integration was also intuitive - the documentation was clear, and the streaming feature allowed for a smooth, responsive user experience that felt natural and engaging.
